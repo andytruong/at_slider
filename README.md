@@ -14,6 +14,13 @@ Built on:
 - Features — Used for preconfig things.
 - jQuery Cycle 2
 
+### Place the slider
+
+A slider is a block, we can use block management UI to place the slider to place
+we want.
+
+For more flexibility, we can use [context.module](https://drupal.org/project/context)
+
 ### Customize
 
 We can provide options for each slider bean rendered on page.
