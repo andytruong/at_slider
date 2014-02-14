@@ -14,6 +14,15 @@ Built on:
 - Features — Used for preconfig things.
 - jQuery Cycle 2
 
+### Install
+
+This is just a simple module, we can install it as same as other modules.
+
+After install we need download jquery cycle library too. This can be simply done
+with Drush — run `drush atr` after enabled this module. If we do not have Drush
+available, we can download http://malsup.github.io/min/jquery.cycle.all.min.js to
+./sites/all/libraries/jquery.cycle/jquery.cycle.all.min.js
+
 ### Place the slider
 
 A slider is a block, we can use block management UI to place the slider to place
