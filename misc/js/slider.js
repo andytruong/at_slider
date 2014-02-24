@@ -9,7 +9,7 @@ Drupal.behaviors.atSlider.attach = function (context, settings) {
         var options = settings.at_slider[delta];
         
         $(this)
-            .find('.field-collection-container .field-name-slider-item .field-items')
+            .find('.field-collection-container .field-name-slider-item .field-items, .field-collection-container .field--name-slider-item .field__items')
             .cycle(options);
     });
 
