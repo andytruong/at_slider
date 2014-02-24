@@ -4,13 +4,14 @@ core = 7.x
 package = Andy Truong
 version = 7.x-1.0-dev
 project = at_slider
+
 dependencies[] = at_base
 dependencies[] = bean
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = image
-dependencies[] = views
+
 features[bean_type][] = slider
 features[ctools][] = bean_admin_ui:bean:5
 features[features_api][] = api:2
