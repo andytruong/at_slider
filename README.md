@@ -47,8 +47,6 @@ options:
 
 jCycle options reference can be found at http://jquery.malsup.com/cycle2/api/#options
 
-Started by Andy Truong for GO1.
-
 ### Example for slider with pager:
 
 ```yaml
@@ -57,3 +55,7 @@ options:
         pager: '#slider-home-pager'
         wrapper-after: '<div id="slider-home-pager"></div>'
 ```
+
+### Credits
+
+Started by Andy Truong for GO1.
