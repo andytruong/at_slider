@@ -10,7 +10,7 @@ include_once 'at_slider.features.inc';
  * Implements hook_entity_view_alter()
  */
 function at_slider_entity_view_alter(&$build, $entity_type) {
-    if ('bean' === $entity_type) {
+    if (('bean' === $entity_type) && 'slider' === $build['#bundle']) {
         if (1 < count(element_children($build['slider_item']))) {
             // For debug, developer can disable the JS calls.
             if (empty($_GET['no_at_slider'])) {
