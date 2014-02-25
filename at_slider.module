@@ -28,7 +28,7 @@ function at_slider_attach_js(&$build) {
     if (!empty($build['slider_image_wrapper'][0])) {
         $build['slider_image_wrapper']['#access'] = FALSE;
         $build['#prefix'] .= sprintf(
-          ' style="background-image: url(\'%s\')"',
+          ' style="background-image: url(\'%s\'); background-position: 50% 50%;"',
           preg_replace(
             '/.+src="([^"]+)".+/',
             '$1',
