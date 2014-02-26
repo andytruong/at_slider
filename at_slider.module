@@ -84,6 +84,17 @@ function at_slider_render_field_collection($build, &$options) {
         unset($options['wrapper-after']);
     }
 
+    // Use custom template to render field collection item
+    if (!empty($options['item-template'])) {
+        $twig = at_container('twig');
+        foreach (element_children($build) as $i) {
+            $build[$i] = array(
+                '#markup' => $twig->render($options['item-template'], $build[$i])
+            );
+        }
+        unset($options['item-template']);
+    }
+
     $return = render($build);
 
     // Add data attributes

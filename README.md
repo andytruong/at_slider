@@ -43,6 +43,9 @@ options:
     default:
         speed: 600
         manualSpeed: 100
+        # If you want customize HTML structure of slider-item, you can define
+        # this option
+        item-template: '@crom_andy/templates/slider/item-image.html.twig'
 ```
 
 jCycle options reference can be found at http://jquery.malsup.com/cycle2/api/#options
