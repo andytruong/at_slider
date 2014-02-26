@@ -11,9 +11,7 @@ include_once 'at_slider.features.inc';
  */
 function at_slider_entity_view_alter(&$build, $entity_type) {
     if (('bean' === $entity_type) && 'slider' === $build['#bundle']) {
-        if (1 < count(element_children($build['slider_item']))) {
-            at_slider_attach_js($build);
-        }
+        at_slider_attach_js($build);
     }
 }
 
@@ -39,17 +37,19 @@ function at_slider_attach_js(&$build) {
     $build['#prefix'] .= '>';
     $build['#suffix'] = '</div>';
 
+    if (1 < count(element_children($build['slider_item']))) {
+        $build['#attached']['js'] = array(
+          $lib . '/jquery.cycle.all.min.js',
+          drupal_get_path('module', 'at_slider') . '/misc/js/slider.js',
+          array('type' => 'setting', 'data' => array('at_slider' => array(
+            $build['#entity']->delta => $options,
+          ))),
+        );
+    }
+
     $options = at_slider_get_js_options($build['#entity']);
     $build['slider_item'] = array(
       '#markup' => at_slider_render_field_collection($build['slider_item'], $options),
-    );
-
-    $build['#attached']['js'] = array(
-      $lib . '/jquery.cycle.all.min.js',
-      drupal_get_path('module', 'at_slider') . '/misc/js/slider.js',
-      array('type' => 'setting', 'data' => array('at_slider' => array(
-        $build['#entity']->delta => $options,
-      ))),
     );
 }
 
