@@ -4,6 +4,9 @@
   Drupal.behaviors.atSlider.attach = function(context, settings) {
 
     $('.entity-bean.bean-slider').each(function() {
+      if ($(this).hasClass('atSliderProccessed')) {
+        return;
+      }
       // Find delta, options
       var $e = $(this);
       var delta = $(this).parents('.at-slider:eq(0)').data('delta').replace(/^slider-/, '');
@@ -19,6 +22,7 @@
 
       apply('.field-collection-container .field-name-slider-item .field-items');
       apply('.field-collection-container .field--name-slider-item .field__items');
+      $(this).addClass('atSliderProccessed');
     });
 
   };
