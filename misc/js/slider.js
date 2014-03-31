@@ -3,10 +3,7 @@
   Drupal.behaviors.atSlider = {};
   Drupal.behaviors.atSlider.attach = function(context, settings) {
 
-    $('.entity-bean.bean-slider').each(function() {
-      if ($(this).hasClass('atSliderProccessed')) {
-        return;
-      }
+    $('.entity-bean.bean-slider:not(".atSliderProccessed")').each(function() {
       // Find delta, options
       var $e = $(this);
       var delta = $(this).parents('.at-slider:eq(0)').data('delta').replace(/^slider-/, '');
