@@ -1,4 +1,4 @@
-AT Slider
+@Slider
 ===
 
 This is a very simple module that provides slider blocks to your Drupal site.
